@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: rhtap-buildpack-demo-1
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rh-buildpacks-tenant/rhtap-buildpack-demo-1/rhtap-buildpack-demo-1@sha256:98d7c7b0f0294324f66f3b6f632d5a7d341a89dfbea0eccb3874dc6e597347d6
+        name: my-java-quarkus
+        resources: {}
+status: {}
